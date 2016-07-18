@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% endblock %}
+
+{% block body %}
+    {{ parent() }}
+    <div class="header-line">
+            <div class="row header-part row-eq-height">
+                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 blank">
+                    
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+
+    
+        {% for offer in offers %}
+            <div class="offer">
+                <img class="img-responsive offer-thumb" src="{{ asset('images/blank.png') }}">
+                <b><a class="show-offer" href="{{ path('offer_display',{'id' : offer.id}) }}">{{ offer.name }}</a></b><br>
+                Zastosowanie: {{ offer.application }} <br>
+                Stan na magazynie: {{ offer.state }} <br>
+                Cena: {{ offer.price }} zł / {{ offer.per }}
+            </div>
+        {% endfor %}
+                </div>
+            </div>
+    </div>
+    
+{% endblock %}

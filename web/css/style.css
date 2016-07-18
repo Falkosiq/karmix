@@ -1,0 +1,597 @@
+@font-face {
+    font-family: 'TW'; 
+    src: url('../fonts/tw.ttf'); 
+}
+
+html,body {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  overflow: initial;
+  color:white;
+  font-family: TW;
+  font-size:30px;
+}
+
+.header-line{
+    margin: 0px auto;
+    width:100%;
+    height:100%;
+}
+
+.header-part{
+    margin: 0px auto;
+    width:100%;
+    height:100%;
+}
+
+.full-col{
+    height:100%;
+}
+
+.lower-part{
+    margin: 0px auto;
+    width:100%;
+    height:100%;
+}
+.lower-line{
+    margin: 0px auto;
+    width:100%;
+    padding:0px;
+}
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.row > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+
+#nav-menu{
+    position:fixed;
+    height:100%;
+    width: 16.66%;
+    z-index:2;
+}
+.navi{
+    height:100%;
+    background-image: url('../images/nav-bg.jpg'); 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+ul{
+    margin:0px auto;
+    padding:0px;
+    list-style-type: none;
+    text-align:center;
+}
+
+li{
+    margin-bottom:20px;
+}
+
+a{
+    color:#fff;
+}
+
+a:hover{
+    color:#c0c0c0;
+    text-decoration:none;
+}
+a:visited{
+    color:#fff;
+    text-decoration:none;
+}
+a:focus{
+    color:#fff;
+    text-decoration:none;
+}
+
+.show-offer{
+    color:#000;
+}
+
+.show-offer:hover{
+    color:#c0c0c0;
+    text-decoration:none;
+}
+.show-offer:visited{
+    color:#000;
+    text-decoration:none;
+}
+.show-offer:focus{
+    color:#000;
+    text-decoration:none;
+}
+.nav-toggle{
+    position:fixed;
+    visibility: hidden;
+    color:#fff;
+}
+
+.nav-toggle:hover{
+    text-decoration:none;
+    color:#c0c0c0;
+}
+
+.nav-toggle:active{
+    text-decoration:none;
+    color:#fff;
+}
+
+.nav-toggle:visited{
+    text-decoration:none;
+    color:#fff;
+}
+
+.nav-toggle:focus{
+    text-decoration:none;
+    color:#fff;
+}
+.logo{
+        padding:20%;
+    }
+    
+.con-min{
+     text-align: center;
+     font-size:20px;
+    }
+    
+    #pasze{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        font-size:48px;
+        width:100%;
+        height:34%;
+        transition:all 0.5s ease;
+        -webkit-transition:all 0.5s ease;
+        -o-transition:all 0.5s ease;
+        -moz-transition:all 0.5s ease;
+        background:url('../images/pasze.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position:center;
+    }
+    #pasze:hover{
+         transition:all 0.5s ease;
+        -webkit-transition:all 0.5s ease;
+        -o-transition:all 0.5s ease;
+        -moz-transition:all 0.5s ease;
+        font-weight: bold;
+        transform: scale(0.95);  
+        background:url('../images/pasze_hov.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position:center;
+    }
+        
+    .cat-row{
+        margin:0px;
+        height:33%;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .cat{
+        padding:0px;
+        height:100%;
+        width:100%;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .cat p{
+        font-size:48px;
+        margin:0px;
+        text-align: center;
+    }
+    .cat span{
+        margin:0px;
+        text-align: center;
+    }
+    .zboza{
+        background:url('../images/zboza.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: center;
+        transition:all 0.5s ease;
+        -webkit-transition:all 0.5s ease;
+        -o-transition:all 0.5s ease;
+        -moz-transition:all 0.5s ease;
+    }
+    .zboza:hover{
+        transition:all 0.5s ease;
+        -webkit-transition:all 0.5s ease;
+        -o-transition:all 0.5s ease;
+        -moz-transition:all 0.5s ease;
+        font-weight: bold;
+        transform: scale(0.95);  
+        background:url('../images/zboza_hov.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position:center;
+    }
+    .karmy{
+        background:url('../images/ryby.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: center;
+        transition:all 0.5s ease;
+        -webkit-transition:all 0.5s ease;
+        -o-transition:all 0.5s ease;
+        -moz-transition:all 0.5s ease;        
+    }
+    .karmy:hover{
+        transition:all 0.5s ease;
+        -webkit-transition:all 0.5s ease;
+        -o-transition:all 0.5s ease;
+        -moz-transition:all 0.5s ease;
+        font-weight: bold;
+        transform: scale(0.95);  
+        background:url('../images/ryby_hov.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position:center;
+    }
+    .preparaty{
+        background:url('../images/preparaty.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: center;
+        transition:all 0.5s ease;
+        -webkit-transition:all 0.5s ease;
+        -o-transition:all 0.5s ease;
+        -moz-transition:all 0.5s ease;
+    }
+    .preparaty:hover{
+        transition:all 0.5s ease;
+        -webkit-transition:all 0.5s ease;
+        -o-transition:all 0.5s ease;
+        -moz-transition:all 0.5s ease;
+        font-weight: bold;
+        transform: scale(0.95);  
+        background:url('../images/zboza_hov.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position:center;
+    }
+    .wyposazenie{
+        background:url('../images/wyposazenie.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: center;
+        transition:all 0.5s ease;
+        -webkit-transition:all 0.5s ease;
+        -o-transition:all 0.5s ease;
+        -moz-transition:all 0.5s ease;
+    }
+    .wyposazenie:hover{
+        transition:all 0.5s ease;
+        -webkit-transition:all 0.5s ease;
+        -o-transition:all 0.5s ease;
+        -moz-transition:all 0.5s ease;
+        font-weight: bold;
+        transform: scale(0.95);  
+        background:url('../images/wyposazenie_hov.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position:center;
+    }
+        
+    #drob{
+        background:url('../images/drob.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position:center;
+         transition:all 0.5s ease;
+        -webkit-transition:all 0.5s ease;
+        -o-transition:all 0.5s ease;
+        -moz-transition:all 0.5s ease;
+        height:25%;
+    }
+    .wieprz{
+        background:url('../images/wieprz.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position:center;
+         transition:all 0.5s ease;
+        -webkit-transition:all 0.5s ease;
+        -o-transition:all 0.5s ease;
+        -moz-transition:all 0.5s ease;
+    }
+    .bydlo{
+        background:url('../images/bydlo.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position:center;
+         transition:all 0.5s ease;
+        -webkit-transition:all 0.5s ease;
+        -o-transition:all 0.5s ease;
+        -moz-transition:all 0.5s ease;
+    }
+    .konie{
+        background:url('../images/konie.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position:center;
+         transition:all 0.5s ease;
+        -webkit-transition:all 0.5s ease;
+        -o-transition:all 0.5s ease;
+        -moz-transition:all 0.5s ease;
+    }
+    .golebie{
+        background:url('../images/golebie.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position:center;
+         transition:all 0.5s ease;
+        -webkit-transition:all 0.5s ease;
+        -o-transition:all 0.5s ease;
+        -moz-transition:all 0.5s ease;
+    }
+    .psy{
+        background:url('../images/psy.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position:center;
+         transition:all 0.5s ease;
+        -webkit-transition:all 0.5s ease;
+        -o-transition:all 0.5s ease;
+        -moz-transition:all 0.5s ease;
+    }
+    .ogolne{
+        background:url('../images/ogolne.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position:center;
+         transition:all 0.5s ease;
+        -webkit-transition:all 0.5s ease;
+        -o-transition:all 0.5s ease;
+        -moz-transition:all 0.5s ease;
+    }
+    #drob:hover{
+        transition:all 0.5s ease;
+        -webkit-transition:all 0.5s ease;
+        -o-transition:all 0.5s ease;
+        -moz-transition:all 0.5s ease;
+        font-weight: bold;
+        transform: scale(0.95);  
+        background:url('../images/drob_hov.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position:center;
+    }
+    .wieprz:hover{
+       transition:all 0.5s ease;
+        -webkit-transition:all 0.5s ease;
+        -o-transition:all 0.5s ease;
+        -moz-transition:all 0.5s ease;
+        font-weight: bold;
+        transform: scale(0.95);  
+        background:url('../images/wieprz_hov.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position:center;
+    }
+    .bydlo:hover{
+        transition:all 0.5s ease;
+        -webkit-transition:all 0.5s ease;
+        -o-transition:all 0.5s ease;
+        -moz-transition:all 0.5s ease;
+        font-weight: bold;
+        transform: scale(0.95);  
+        background:url('../images/bydlo_hov.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position:center;
+    }
+    .konie:hover{
+        transition:all 0.5s ease;
+        -webkit-transition:all 0.5s ease;
+        -o-transition:all 0.5s ease;
+        -moz-transition:all 0.5s ease;
+        font-weight: bold;
+        transform: scale(0.95);  
+        background:url('../images/konie_hov.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position:center;
+    }
+    .golebie:hover{
+        transition:all 0.5s ease;
+        -webkit-transition:all 0.5s ease;
+        -o-transition:all 0.5s ease;
+        -moz-transition:all 0.5s ease;
+        font-weight: bold;
+        transform: scale(0.95);  
+        background:url('../images/golebie_hov.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position:center;
+    }
+    .psy:hover{
+        transition:all 0.5s ease;
+        -webkit-transition:all 0.5s ease;
+        -o-transition:all 0.5s ease;
+        -moz-transition:all 0.5s ease;
+        font-weight: bold;
+        transform: scale(0.95);  
+        background:url('../images/psy_hov.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position:center;
+    }
+    .ogolne:hover{
+        transition:all 0.5s ease;
+        -webkit-transition:all 0.5s ease;
+        -o-transition:all 0.5s ease;
+        -moz-transition:all 0.5s ease;
+        font-weight: bold;
+        transform: scale(0.95);  
+        background:url('../images/wyposazenie_hov.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position:center;
+    }
+hr{
+        margin-left:20%;
+        margin-right:20%;
+        border: 1px #fff solid;
+    }
+    
+    .col-sm-12{
+        position:float;
+        float:left;
+    }
+    
+    .offer{
+        margin:20px;
+        color:#000;
+    }
+    .offer-thumb{
+        float:left;
+        height:160px;
+        margin-right:30px;
+    }
+    .offer-photo
+    {
+        max-width:400px;
+    }
+@media screen and (max-width: 991px){
+    .row > [class*='blank'] {
+      display: none;
+    }
+    
+    .header-line{
+        margin-top:80px;
+        height:auto;
+    }
+    
+    .header-part{
+        height:auto;
+    }
+    .row-eq-height {
+        display: block;
+    }
+    #pasze{
+        height:200px;
+    }
+    #drob{
+        height:200px;
+    }
+    .cat{
+        height:200px;
+    }
+    #nav-menu{
+        top:0px;
+        height:80px;
+        width:100%;
+    }
+    
+    .nav-toggle{
+        position:absolute;
+        top:20px;
+        right:20px;
+        z-index:3;
+        visibility:visible;
+    }
+    
+    .main-nav{
+        position:fixed;
+        background-color:#000;
+        width:100%;
+        height:100%;
+        top:0;
+        padding-top:30%;
+        left:0;
+        z-index:3;
+        opacity:0;
+        visibility:hidden;
+        -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+        transition: opacity 0.5s, visibility 0s 0.5s;
+        vertical-align:center;
+    }
+    .navi{
+        background:#5e5e5e;
+    }
+    
+    .open{
+        opacity:0.9;
+        visibility:visible;
+        -webkit-transition: opacity 0.5s;
+        transition: opacity 0.5s;
+    }    
+    .logo{
+        padding:10px;
+        max-height:80px;
+    }
+    .con-min{
+        display:none;
+    }
+    hr{
+        display:none;
+    }
+}
+                
+

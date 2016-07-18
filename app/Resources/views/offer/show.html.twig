@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <style>
+        body{
+            background:#b9b9b9;
+            color:#000;
+        }
+    </style>
+    <h1>offer</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ offer.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ offer.name }}</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>{{ offer.price }}</td>
+            </tr>
+            <tr>
+                <th>Per</th>
+                <td>{{ offer.per }}</td>
+            </tr>
+            <tr>
+                <th>Application</th>
+                <td>{{ offer.application }}</td>
+            </tr>
+            <tr>
+                <th>State</th>
+                <td>{{ offer.state }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ offer.description }}</td>
+            </tr>
+            <tr>
+                <th>Photo1</th>
+                <td>{{ offer.photo1 }}</td>
+            </tr>
+            <tr>
+                <th>Photo2</th>
+                <td>{{ offer.photo2 }}</td>
+            </tr>
+            <tr>
+                <th>Photo3</th>
+                <td>{{ offer.photo3 }}</td>
+            </tr>
+            <tr>
+                <th>Tag</th>
+                <td>{{ offer.tag }}</td>
+            </tr>
+            <tr>
+                <th>Category</th>
+                <td>{{ offer.category }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('admin_offer_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('admin_offer_edit', { 'id': offer.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

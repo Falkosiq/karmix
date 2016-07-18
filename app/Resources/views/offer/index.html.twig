@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <style>
+        body{
+            background:#b9b9b9;
+            color:#000;
+        }
+    </style>
+    <h1>offer list</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Per</th>
+                <th>Application</th>
+                <th>State</th>
+                <th>Description</th>
+                <th>Photo1</th>
+                <th>Photo2</th>
+                <th>Photo3</th>
+                <th>Tag</th>
+                <th>Category</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for offer in offers %}
+            <tr>
+                <td><a href="{{ path('admin_offer_show', { 'id': offer.id }) }}">{{ offer.id }}</a></td>
+                <td>{{ offer.name }}</td>
+                <td>{{ offer.price }}</td>
+                <td>{{ offer.per }}</td>
+                <td>{{ offer.application }}</td>
+                <td>{{ offer.state }}</td>
+                <td>{{ offer.description }}</td>
+                <td>{{ offer.photo1 }}</td>
+                <td>{{ offer.photo2 }}</td>
+                <td>{{ offer.photo3 }}</td>
+                <td>{{ offer.tag }}</td>
+                <td>{{ offer.category }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('admin_offer_show', { 'id': offer.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('admin_offer_edit', { 'id': offer.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('admin_offer_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

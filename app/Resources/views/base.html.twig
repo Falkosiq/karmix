@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Karmix{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('css/normalize.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        {% block body %}
+            <div id="nav-menu">
+            <div class="navi">
+                <a href="{{ path('homepage') }}"><img class="img-responsive logo" src="{{ asset('images/logo.png') }}"></a>
+                <hr>
+                <ul class="main-nav">
+                    <li>
+                        {% if app.request.get('_route') == 'homepage' %}
+                            <a href="#about">o firmie</a>
+                        {% else %}
+                            <a href="{{ path('homepage') }}#about">o firmie</a>
+                        {% endif %}
+                    </li>
+                    <li>
+                        {% if app.request.get('_route') == 'homepage' %}
+                            <a href="#pasze">oferta</a>
+                        {% else %}
+                            <a href="{{ path('homepage') }}#pasze">oferta</a>
+                        {% endif %}
+                    </li>
+                    <li>
+                        {% if app.request.get('_route') == 'homepage' %}
+                            <a href="#collaboration">współpraca</a>
+                        {% else %}
+                            <a href="{{ path('homepage') }}#collaboration">współpraca</a>
+                        {% endif %}
+                    </li>
+                    <li>
+                        {% if app.request.get('_route') == 'homepage' %}
+                            <a href="#contact">kontakt</a>
+                        {% else %}
+                            <a href="{{ path('homepage') }}#contact">kontakt</a>
+                        {% endif %}
+                    </li>
+                   {% if is_granted('ROLE_ADMIN') %}
+                     <li>
+                        <a href="{{ path('admin') }}">admin</a>
+                    </li>
+                    {% endif %}
+                </ul>
+                <hr>
+                <a href="#" class="nav-toggle">
+                    MENU
+                </a>
+                <div class="con-min">Karmix<br>
+                43-516 Zabrzeg,<br>
+                ul. Ks. Janoszka 32<br>
+                Telefon/fax:<br>
+                32 214 22 70<br>
+                E-mail:<br>
+                karmix@osq.pl<br>
+                Tel. kom.:<br>
+                516 078 748<br>
+                505 028 428
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+    
+        {% block javascripts %}
+            <script type="text/javascript" src="{{ asset('js/jquery-1.8.3.min.js') }}"></script>
+            <script>
+                $('.nav-toggle').click(function() {
+                    $(this).toggleClass('active');
+                    $('.main-nav').toggleClass('open');
+                    event.preventDefault();
+                });
+                /* When user clicks a link */
+                $('.main-nav li a').click(function() {
+                    $('.nav-toggle').toggleClass('active');
+                    $('.main-nav').toggleClass('open');
+
+                });
+            
+            </script>
+            <script>
+                $('a').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $(this).attr('href') ).offset().top
+    }, 500);
+    return false;
+});
+            </script>
+        {% endblock %}
+    </body>
+</html>
