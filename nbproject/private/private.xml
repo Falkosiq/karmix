@@ -6,6 +6,10 @@
             <file>file:/E:/wir/karmix/app/Resources/views/base.html.twig</file>
             <file>file:/E:/wir/karmix/app/Resources/views/offer/display.html.twig</file>
             <file>file:/E:/wir/karmix/app/Resources/views/offer/list.html.twig</file>
+            <file>file:/E:/wir/karmix/app/config/config_prod.yml</file>
+            <file>file:/E:/wir/karmix/app/config/parameters.yml</file>
+            <file>file:/E:/wir/karmix/app/AppKernel.php</file>
+            <file>file:/E:/wir/karmix/app/config/config.yml</file>
         </group>
     </open-files>
 </project-private>
