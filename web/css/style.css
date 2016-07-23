@@ -592,6 +592,17 @@ hr{
     hr{
         display:none;
     }
+    .cat p{
+        font-size:32px;
+        line-height: 100%;
+        margin:0px;
+        text-align: center;
+    }
+    .cat span{
+        font-size:26px;
+        margin:0px;
+        text-align: center;
+    }
 }
                 
 
