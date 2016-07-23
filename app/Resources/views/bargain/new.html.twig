@@ -1,0 +1,16 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block body %}
+    <h1>Tworzenie nowej promocji</h1>
+    {% form_theme form 'bootstrap_3_layout.html.twig' %}
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type="submit" value="Dodaj" />
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('admin_bargain_index') }}">Powrót do listy promocji</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -18,14 +18,16 @@ class offerController extends Controller
     /**
      * Lists all offer entities.
      *
-     * @Route("/admin/offer", name="admin_offer_index")
+     * @Route("/admin/offer/index/{category}", name="admin_offer_index")
      * @Method("GET")
      */
-    public function indexAction()
+    public function indexAction($category)
     {
         $em = $this->getDoctrine()->getManager();
 
-        $offers = $em->getRepository('AppBundle:offer')->findAll();
+        $offers = $em->getRepository('AppBundle:offer')->findBy(
+                    array('category' => $category)
+                );
 
         return $this->render('offer/index.html.twig', array(
             'offers' => $offers,

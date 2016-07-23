@@ -14,8 +14,14 @@ class DefaultController extends Controller
     public function indexAction(Request $request)
     {
         // replace this example code with whatever you need
+        
+        $em = $this->getDoctrine()->getManager();
+
+        $bargains = $em->getRepository('AppBundle:Bargain')->findAll();
+        
         return $this->render('default/index.html.twig', array(
             'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
+            'bargains' => $bargains,
         ));
     }
     /**
@@ -24,8 +30,14 @@ class DefaultController extends Controller
     public function paszeAction(Request $request)
     {
         // replace this example code with whatever you need
+        
+        $em = $this->getDoctrine()->getManager();
+        
+        $bargains = $em->getRepository('AppBundle:Bargain')->findAll();
+        
         return $this->render('default/pasze.html.twig', array(
             'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
+            'bargains' => $bargains,
         ));
     }
     /**

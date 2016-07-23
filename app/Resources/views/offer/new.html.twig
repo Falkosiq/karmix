@@ -1,22 +1,16 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin/base.html.twig' %}
 
 {% block body %}
-    <style>
-        body{
-            background:#b9b9b9;
-            color:#000;
-        }
-    </style>
-    <h1>offer creation</h1>
-
+    <h1>Tworzenie nowej oferty</h1>
+    {% form_theme form 'bootstrap_3_layout.html.twig' %}
     {{ form_start(form) }}
         {{ form_widget(form) }}
-        <input type="submit" value="Create" />
+        <input type="submit" value="Dodaj" />
     {{ form_end(form) }}
 
     <ul>
         <li>
-            <a href="{{ path('admin_offer_index') }}">Back to the list</a>
+            <a href="{{ path('admin') }}">Powrót do panelu</a>
         </li>
     </ul>
 {% endblock %}

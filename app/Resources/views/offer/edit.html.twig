@@ -1,26 +1,20 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin/base.html.twig' %}
 
 {% block body %}
-    <style>
-        body{
-            background:#b9b9b9;
-            color:#000;
-        }
-    </style>
-    <h1>offer edit</h1>
-
+    <h1>Edycja oferty</h1>
+    {% form_theme edit_form 'bootstrap_3_layout.html.twig' %}
     {{ form_start(edit_form) }}
         {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
+        <input type="submit" value="Zapisz zmiany" />
     {{ form_end(edit_form) }}
 
     <ul>
         <li>
-            <a href="{{ path('admin_offer_index') }}">Back to the list</a>
+            <a href="{{ path('admin') }}">Powrót do panelu</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+                <input type="submit" value="Usuń">
             {{ form_end(delete_form) }}
         </li>
     </ul>
