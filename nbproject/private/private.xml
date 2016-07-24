@@ -4,12 +4,15 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/E:/wir/karmix/app/Resources/views/base.html.twig</file>
-            <file>file:/E:/wir/karmix/app/Resources/views/offer/display.html.twig</file>
             <file>file:/E:/wir/karmix/app/Resources/views/offer/list.html.twig</file>
-            <file>file:/E:/wir/karmix/app/config/config_prod.yml</file>
-            <file>file:/E:/wir/karmix/app/config/parameters.yml</file>
-            <file>file:/E:/wir/karmix/app/AppKernel.php</file>
-            <file>file:/E:/wir/karmix/app/config/config.yml</file>
+            <file>file:/E:/wir/karmix/src/AppBundle/Controller/offerController.php</file>
+            <file>file:/E:/wir/karmix/app/Resources/views/admin/index.html.twig</file>
+            <file>file:/E:/wir/karmix/src/AppBundle/Controller/DefaultController.php</file>
+            <file>file:/E:/wir/karmix/app/Resources/views/bargain/index.html.twig</file>
+            <file>file:/E:/wir/karmix/web/css/style.css</file>
+            <file>file:/E:/wir/karmix/app/Resources/views/admin/base.html.twig</file>
+            <file>file:/E:/wir/karmix/app/Resources/views/default/pasze.html.twig</file>
+            <file>file:/E:/wir/karmix/app/Resources/views/default/index.html.twig</file>
         </group>
     </open-files>
 </project-private>
