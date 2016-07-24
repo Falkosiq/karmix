@@ -8,6 +8,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 
 class offerType extends AbstractType
 {
@@ -31,9 +32,9 @@ class offerType extends AbstractType
                 )
             ))
             ->add('description', TextareaType::class, array('label' => 'Opis'))
-            ->add('photo1')
-            ->add('photo2')
-            ->add('photo3')
+            ->add('photo1', FileType::class, array('label' => 'Zdjęcie 1'))
+            ->add('photo2', FileType::class, array('label' => 'Zdjęcie 2', 'required' => false))
+            ->add('photo3', FileType::class, array('label' => 'Zdjęcie 3', 'required' => false))
             ->add('tag')
             ->add('category', ChoiceType::class, array(
                 'label' => 'Kategoria',

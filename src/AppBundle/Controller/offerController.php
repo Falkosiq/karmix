@@ -8,6 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use AppBundle\Entity\offer;
 use AppBundle\Form\offerType;
+use Symfony\Component\HttpFoundation\File\File;
 
 /**
  * offer controller.
@@ -47,6 +48,36 @@ class offerController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            
+            $file = $offer->getPhoto1();
+            $fileName = md5(uniqid()).'.'.$file->guessExtension();
+            $file->move(
+                $this->getParameter('images'),
+                $fileName
+            );
+            $offer->setPhoto1($fileName);
+            
+            $file = $offer->getPhoto2();
+            if($file)
+            {
+                $fileName = md5(uniqid()).'.'.$file->guessExtension();
+                $file->move(
+                    $this->getParameter('images'),
+                    $fileName
+                );
+                $offer->setPhoto2($fileName);
+            }
+            
+            $file = $offer->getPhoto3();
+            if($file)
+            {
+                $fileName = md5(uniqid()).'.'.$file->guessExtension();
+                $file->move(
+                    $this->getParameter('images'),
+                    $fileName
+                );
+                $offer->setPhoto3($fileName);
+            }
             $em = $this->getDoctrine()->getManager();
             $em->persist($offer);
             $em->flush();
@@ -84,11 +115,41 @@ class offerController extends Controller
      */
     public function editAction(Request $request, offer $offer)
     {
+        $offer->setPhoto1(new File($this->getParameter('images').'/'.$offer->getPhoto1()));
+        $offer->setPhoto2(new File($this->getParameter('images').'/'.$offer->getPhoto2()));
+        $offer->setPhoto3(new File($this->getParameter('images').'/'.$offer->getPhoto3()));
         $deleteForm = $this->createDeleteForm($offer);
         $editForm = $this->createForm('AppBundle\Form\offerType', $offer);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
+            
+            $file = $offer->getPhoto1();
+            $fileName = md5(uniqid()).'.'.$file->guessExtension();
+            $file->move(
+                $this->getParameter('images'),
+                $fileName
+            );
+            $offer->setPhoto1($fileName);
+            
+            $file = $offer->getPhoto2();
+            if($file)
+            {
+            $fileName = md5(uniqid()).'.'.$file->guessExtension();
+            $file->move(
+                $this->getParameter('images'),
+                $fileName
+            );
+            $offer->setPhoto2($fileName);
+            }
+            $file = $offer->getPhoto3();
+            $fileName = md5(uniqid()).'.'.$file->guessExtension();
+            $file->move(
+                $this->getParameter('images'),
+                $fileName
+            );
+            $offer->setPhoto3($fileName);
+            
             $em = $this->getDoctrine()->getManager();
             $em->persist($offer);
             $em->flush();

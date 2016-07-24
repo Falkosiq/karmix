@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * offer
@@ -64,23 +65,27 @@ class offer
     private $description;
 
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="photo1", type="bigint")
+     * @ORM\Column(name="photo1", type="string")
+     * @Assert\NotBlank(message="Please, upload the offer photo as a JPG file.")
+     * @Assert\File(mimeTypes={ "image/jpeg" })
      */
     private $photo1;
 
     /**
-     * @var int
+    * @var string
      *
-     * @ORM\Column(name="photo2", type="bigint", nullable=true)
+     * @ORM\Column(name="photo2", type="string", nullable=true)
+     * @Assert\File(mimeTypes={ "image/jpeg" })
      */
     private $photo2;
 
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="photo3", type="bigint", nullable=true)
+     * @ORM\Column(name="photo3", type="string", nullable=true)
+     * @Assert\File(mimeTypes={ "image/jpeg" })
      */
     private $photo3;
 
@@ -256,7 +261,7 @@ class offer
     /**
      * Set photo1
      *
-     * @param integer $photo1
+     * @param string $photo1
      *
      * @return offer
      */
@@ -270,7 +275,7 @@ class offer
     /**
      * Get photo1
      *
-     * @return int
+     * @return string
      */
     public function getPhoto1()
     {
@@ -280,7 +285,7 @@ class offer
     /**
      * Set photo2
      *
-     * @param integer $photo2
+     * @param string $photo2
      *
      * @return offer
      */
@@ -294,7 +299,7 @@ class offer
     /**
      * Get photo2
      *
-     * @return int
+     * @return string
      */
     public function getPhoto2()
     {
@@ -304,7 +309,7 @@ class offer
     /**
      * Set photo3
      *
-     * @param integer $photo3
+     * @param string $photo3
      *
      * @return offer
      */
@@ -318,7 +323,7 @@ class offer
     /**
      * Get photo3
      *
-     * @return int
+     * @return string
      */
     public function getPhoto3()
     {
