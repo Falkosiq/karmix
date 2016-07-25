@@ -16,13 +16,17 @@
     
         {% for offer in offers %}
             <div class="offer row">
-                <div class="col-md-3 col-sm-3">
-                    <img class="img-responsive offer-thumb" src="{{ asset('images/blank.png') }}">
+                <div class="col-md-2 col-sm-2 list-photo">
+                    {% if offer.photo1 %}
+                                <img class="img-responsive offer-thumb" src="{{ asset('images/' ~ offer.photo1) }}">
+                            {% else %}
+                                <img class="img-responsive offer-thumb" src="{{ asset('images/blank.jpg') }}">
+                            {% endif %}
                 </div>
-                <div class="col-md-9 col-sm-9">
+                <div class="col-md-10 col-sm-10 list-text">
                 <b><a class="show-offer" href="{{ path('offer_display',{'id' : offer.id}) }}">{{ offer.name }}</a></b>
-                Zastosowanie: {{ offer.application }} <br>
-                Stan na magazynie: {{ offer.state }} <br>
+                <div class="full-list">Zastosowanie: {{ offer.application }} <br>
+                    Stan na magazynie: {{ offer.state }}</div>
                 Cena: {{ offer.price }} zł / {{ offer.per }}
                 </div>
             </div>

@@ -15,25 +15,24 @@
 
     
             <div class="offer">
-                <table>
-                    <tr>
-                        <td>
-                <img class="img-responsive offer-photo" src="{{ asset('images/' ~ offer.photo1) }}">
-                        </td>
-                        <td style="padding:20px">
+                <div class="row">
+                    <div class="col-md-4">
+                            {% if offer.photo1 %}
+                                <img class="img-responsive offer-photo" src="{{ asset('images/' ~ offer.photo1) }}">
+                            {% else %}
+                                <img class="img-responsive offer-photo" src="{{ asset('images/blank.jpg') }}">
+                            {% endif %}
+                    </div>
+                    <div class="col-md-8">
                             <h1><b>{{ offer.name }}</b></h1><br>
-                <b>Zastosowanie:</b><br> {{ offer.application }} <br>
-                <b>Stan na magazynie:</b><br> {{ offer.state }} <br>
-                <b>Cena:</b><br> {{ offer.price }} zł / {{ offer.per }}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
+                            <b>Zastosowanie:</b> {{ offer.application }} <br>
+                            <b>Stan na magazynie:</b> {{ offer.state }} <br>
+                            <b>Cena:</b> {{ offer.price }} zł / {{ offer.per }}
+                    </div>  
+                </div>
                             <br><b>Opis:</b><br>
                             {{ offer.description }}
-                        </td>
-                    </tr>
-                </table>
+                         
             </div>
                 </div>
             </div>

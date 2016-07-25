@@ -50,13 +50,15 @@ class offerController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             
             $file = $offer->getPhoto1();
-            $fileName = md5(uniqid()).'.'.$file->guessExtension();
-            $file->move(
-                $this->getParameter('images'),
-                $fileName
-            );
-            $offer->setPhoto1($fileName);
-            
+            if($file)
+            {
+                $fileName = md5(uniqid()).'.'.$file->guessExtension();
+                $file->move(
+                    $this->getParameter('images'),
+                    $fileName
+                );
+                $offer->setPhoto1($fileName);
+            }
             $file = $offer->getPhoto2();
             if($file)
             {

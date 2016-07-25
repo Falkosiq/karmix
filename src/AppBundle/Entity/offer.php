@@ -67,8 +67,7 @@ class offer
     /**
      * @var string
      *
-     * @ORM\Column(name="photo1", type="string")
-     * @Assert\NotBlank(message="Please, upload the offer photo as a JPG file.")
+     * @ORM\Column(name="photo1", type="string", nullable=true)
      * @Assert\File(mimeTypes={ "image/jpeg" })
      */
     private $photo1;
@@ -376,6 +375,11 @@ class offer
     public function getCategory()
     {
         return $this->category;
+    }
+    
+    public function __toString()
+    {
+        return $this->id.'';
     }
 }
 

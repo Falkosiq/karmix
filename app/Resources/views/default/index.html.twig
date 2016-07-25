@@ -9,26 +9,28 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="padding:0px">
                    <div onclick="location.href='{{ path('pasze') }}'" id="pasze" class="cat">
-                        <p>pasze i karmy</p>
+                            <div class="grey-box"> 
+                                 <p>pasze i karmy</p>
+                            </div>
                         </div>
                     <div class="row cat-row">
                         <div onclick="location.href='{{ path('offer_list', { 'category' : 'zboza' }) }}'" class="col-lg-6 col-md-6 col-sm-6 col-xs-6 cat zboza">
-                            <p>zboża</p>
-                            <span>i komponenty paszowe</span>
+                            <div class="grey-box"><p>zboża</p>
+                                <span>i komponenty paszowe</span></div>
                         </div>
                         <div onclick="location.href='{{ path('offer_list', { 'category' : 'ryby' }) }}'" class="col-lg-6 col-md-6 col-sm-6 col-xs-6 cat karmy">
-                            <p>karmy dla ryb</p>
-                            <span>i zanęty wędkarskie</span>
+                            <div class="grey-box"><p>karmy dla ryb</p>
+                                <span>i zanęty wędkarskie</span></div>
                         </div>
                     </div>
                     <div class="row cat-row">
                         <div onclick="location.href='{{ path('offer_list', { 'category' : 'preparaty' }) }}'" class="col-lg-6 col-md-6 col-sm-6 col-xs-6 cat preparaty">
-                            <p>preparaty</p>
-                            <span>probiotyczne</span>
+                            <div class="grey-box"><p>preparaty</p>
+                                <span>probiotyczne</span></div>
                         </div>
                         <div onclick="location.href='{{ path('offer_list', { 'category' : 'wyposazenie' }) }}'" class="col-lg-6 col-md-6 col-sm-6 col-xs-6 cat wyposazenie">
-                            <span>wyposażenie</span>
-                            <p>rolnictwa</p>
+                            <div class="grey-box"><span>wyposażenie</span>
+                                <p>rolnictwa</p></div>
                         </div>
                     </div>
                 </div>
@@ -37,7 +39,7 @@
                         <div class="flexslider" style="width: 100%; height:100%">
                             <ul class="slides" style="width: 100%; height:100%">
                             {% for bargain in bargains %}
-                                <li style="height:100%"><div onclick="location.href='{{ bargain.link }}'" class="barg" style="background:url('{{ asset('images/' ~ bargain.photo) }}'); width:100%; height:100%; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+                                <li style="height:100%"><div onclick="location.href='{{ path('offer_display', {'id' : bargain.link}) }}'" class="barg" style="background:url('{{ asset('images/' ~ bargain.photo) }}'); width:100%; height:100%; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
                                         <span>{{ bargain.text }}</span>
                                     </div>
                                 </li>
@@ -53,8 +55,18 @@
                 <div class="col-lg-2 col-md-2 blank">
                     
                 </div>
-                <div id="about" class="col-lg-10 col-md-10 col-sm-12 col-xs-12" style="background:yellow;">
-                    o firmie
+                <div id="about" class="col-lg-10 col-md-10 col-sm-12 col-xs-12 sec">
+                    <hr>
+                    <h1>o firmie</h1>
+                    <div class="sec-in">
+                        <p>Witamy na naszej stronie internetowej.<br><br>
+                            Firma Karmix już od wielu lat istnieje na rynku. Działamy głównie na terenie województwa Śląskiego i Wielkopolskiego. Mamy dla Państwa przygotowaną szeroką ofertę pasz i koncentratów. Zajmujemy się także skupem zboża i suszeniem nasion.<br>
+                            W naszej ofercie znalazły się również sprzęty i maszyny rolnicze. Szczegółową ofertę znajdą Państwo na stronie.<br><br>
+                            Zapraszamy!
+                        </p>
+                    </div>
+                    <a href="#pasze"><img src="{{ asset('images/up_button.png') }}"></a>
+                    <hr>
                 </div>
             </div>
         </div>
@@ -63,8 +75,15 @@
                 <div class="col-lg-2 col-md-2 blank">
                     
                 </div>
-                <div id="collaboration" class="col-lg-10 col-md-10 col-sm-12 col-xs-12" style="background:yellow;">
-                    współpraca<br><br>
+                <div id="collaboration" class="col-lg-10 col-md-10 col-sm-12 col-xs-12 sec">
+                    <hr>
+                    <h1>współpraca</h1>
+                    <div class="sec-in">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum convallis turpis sit amet dapibus. Quisque eleifend, magna id aliquam fringilla, turpis sapien pharetra turpis, in elementum dui sem ut mauris. Duis neque lacus, consectetur eu faucibus ut, iaculis eu sapien. Nullam sodales quis ipsum eget mollis. Integer in dolor imperdiet, ornare augue et, congue est. Cras eget massa eu ante efficitur vestibulum. Nunc eget risus aliquet erat malesuada scelerisque quis non neque. Ut eleifend feugiat est, vitae accumsan tortor. Sed egestas nisl a libero maximus aliquet nec ac risus. Maecenas maximus purus risus, ultrices feugiat mi fermentum id. Etiam id orci et erat aliquam varius.
+                            </p>
+                    </div>
+                    <a href="#pasze"><img src="{{ asset('images/up_button.png') }}"></a>
+                    <hr>
                 </div>
             </div>
         </div>
@@ -73,8 +92,39 @@
                 <div class="col-lg-2 col-md-2 blank">
                     
                 </div>
-                <div id="contact" class="col-lg-10 col-md-10 col-sm-12 col-xs-12" style="background:yellow;">
-                    siedziba<br><br>
+                <div id="contact" class="col-lg-10 col-md-10 col-sm-12 col-xs-12 sec">
+                    <hr>
+                    <h1>kontakt</h1>
+                    <div class="sec-in row">
+                        <div class="col-md-4">
+                            <div id="map"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <p style="font-size:20px">
+                                <b>Siedziba:</b><br>
+                                KARMIX Franciszek Gluza i Szymon Perz Sp. j.<br>
+                                Huta 140,<br>
+                                63-430 Odolanów.<br><br>
+                                Oddział Karmix<br>
+                                ul. Ks. Janoszka 32,<br>
+                                43-516 Zabrzeg<br>
+                                Godz. otwarcia pn-pt 7.00-16.00 sb 7.00-13.00<br><br>
+                                <b>Telefon/fax</b><br>
+                                32 214 22 70<br><br>
+                                <b>Email</b><br>
+                                karmix@osw.pl<br><br>
+                                <b>Franciszek Gluza</b><br>
+                                tel. 516 078 748<br>
+                                Email: karmixfranek@osw.pl<br><br>
+                                <b>Szymon Perz</b><br>
+                                tel. 505 028 428<br>
+                                Email: karmixszymon@osw.pl
+                                
+                            </p>
+                        </div>
+                    </div>
+                    <a href="#pasze"><img src="{{ asset('images/up_button.png') }}"></a>
+                    <hr>
                 </div>
             </div>
         </div>
@@ -86,4 +136,23 @@
 
 {% block javascripts %}
     {{ parent() }}
+    <script>
+      function initMap() {
+        var mapDiv = document.getElementById('map');
+        var myLatLng = {lat: 49.918553, lng: 18.943157};
+        var map = new google.maps.Map(mapDiv, {
+            center: myLatLng,
+            zoom: 13
+        });
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Karmix'
+        });
+      }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBw47zWKla6IK8CBGvgc7xSB9wk-i2tgQ	
+&callback=initMap">
+    </script>
 {% endblock %}

@@ -32,7 +32,7 @@ class offerType extends AbstractType
                 )
             ))
             ->add('description', TextareaType::class, array('label' => 'Opis'))
-            ->add('photo1', FileType::class, array('label' => 'Zdjęcie 1'))
+            ->add('photo1', FileType::class, array('label' => 'Zdjęcie 1', 'required' => false))
             ->add('photo2', FileType::class, array('label' => 'Zdjęcie 2', 'required' => false))
             ->add('photo3', FileType::class, array('label' => 'Zdjęcie 3', 'required' => false))
             ->add('tag')

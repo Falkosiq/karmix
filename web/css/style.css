@@ -171,7 +171,6 @@ a:hover{
         -webkit-transition:all 0.5s ease;
         -o-transition:all 0.5s ease;
         -moz-transition:all 0.5s ease;
-        font-weight: bold;
         transform: scale(0.95);  
         background:url('../images/pasze_hov.jpg');
         -webkit-background-size: cover;
@@ -184,6 +183,13 @@ a:hover{
     .cat-row{
         margin:0px;
         height:33%;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .cat-row-2{
+        margin:0px;
+        height:25%;
         display:flex;
         align-items: center;
         justify-content: center;
@@ -203,7 +209,7 @@ a:hover{
         text-align: center;
     }
     .cat span{
-        margin:0px;
+        margin:0px auto;
         text-align: center;
     }
     .zboza{
@@ -223,7 +229,6 @@ a:hover{
         -webkit-transition:all 0.5s ease;
         -o-transition:all 0.5s ease;
         -moz-transition:all 0.5s ease;
-        font-weight: bold;
         transform: scale(0.95);  
         background:url('../images/zboza_hov.jpg');
         -webkit-background-size: cover;
@@ -249,7 +254,6 @@ a:hover{
         -webkit-transition:all 0.5s ease;
         -o-transition:all 0.5s ease;
         -moz-transition:all 0.5s ease;
-        font-weight: bold;
         transform: scale(0.95);  
         background:url('../images/ryby_hov.jpg');
         -webkit-background-size: cover;
@@ -275,7 +279,6 @@ a:hover{
         -webkit-transition:all 0.5s ease;
         -o-transition:all 0.5s ease;
         -moz-transition:all 0.5s ease;
-        font-weight: bold;
         transform: scale(0.95);  
         background:url('../images/zboza_hov.jpg');
         -webkit-background-size: cover;
@@ -301,7 +304,6 @@ a:hover{
         -webkit-transition:all 0.5s ease;
         -o-transition:all 0.5s ease;
         -moz-transition:all 0.5s ease;
-        font-weight: bold;
         transform: scale(0.95);  
         background:url('../images/wyposazenie_hov.jpg');
         -webkit-background-size: cover;
@@ -517,7 +519,6 @@ hr{
     }
     .offer-photo
     {
-        max-width:400px;
     }
     .barg{
         display:flex;
@@ -541,6 +542,67 @@ hr{
         display: inline-block;
         vertical-align: middle;
     }
+    #about{
+        height:100vh;
+        background:url('../images/about.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position:center;
+    }
+    #collaboration{
+        height:100vh;
+        background:url('../images/wspolpraca.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position:center;
+    }
+    #contact{
+        height:100vh;
+        background:url('../images/kontakt.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position:center;
+    }
+    .sec-in{
+        display:flex;
+        height:100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .sec a{
+        display:inline-block;
+        width:100px;
+        margin:0px auto;
+    }
+    .sec a img{
+        width:100px;
+    }
+    .sec h1{
+        margin-top:0px;
+        font-size:48px;
+        text-align: center;
+    }
+    .sec p{
+        padding:10%;
+    }
+    #map {
+        width: 100%;
+        height: 400px;
+      }
+      .cat .grey-box{
+          padding:10px;
+          padding-top:6px;
+          text-align:center;
+      }
+      .cat:hover .grey-box{
+          background:rgba(94,94,94,0.8);
+      }
 @media screen and (max-width: 991px){
     .row > [class*='blank'] {
       display: none;
@@ -612,7 +674,7 @@ hr{
     .con-min{
         display:none;
     }
-    hr{
+    .navi hr{
         display:none;
     }
     .cat p{
@@ -623,8 +685,24 @@ hr{
     }
     .cat span{
         font-size:26px;
-        margin:0px;
+        margin:0px auto;
         text-align: center;
+    }
+    .sec-in p{
+        font-size:20px;
+    }
+    .full-list{
+        display:none;
+    }
+    .offer{
+        margin-left:0px;
+        margin-right: 0px;
+    }
+    .list-photo img{
+        margin:auto auto;
+    }
+    .list-text{
+        font-size:20px;
     }
 }
                 
