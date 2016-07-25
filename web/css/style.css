@@ -91,13 +91,18 @@ a:visited{
     text-decoration:none;
 }
 a:focus{
-    color:#c0c0c0;
+    color:#ffe033;
     text-decoration:none;
 }
 a:hover{
-    color:#c0c0c0;
+    color:#ffe033;
     text-decoration:none;
 }
+
+.main-nav li:hover{
+    background: rgba(94,94,94,0.7);
+}
+
 .show-offer{
     color:#000;
 }
@@ -205,6 +210,7 @@ a:hover{
     }
     .cat p{
         font-size:48px;
+        line-height: 40px;
         margin:0px;
         text-align: center;
     }
@@ -543,7 +549,7 @@ hr{
         vertical-align: middle;
     }
     #about{
-        height:100vh;
+        min-height:100vh;
         background:url('../images/about.jpg');
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -552,7 +558,7 @@ hr{
         background-position:center;
     }
     #collaboration{
-        height:100vh;
+        min-height:100vh;
         background:url('../images/wspolpraca.jpg');
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -561,7 +567,7 @@ hr{
         background-position:center;
     }
     #contact{
-        height:100vh;
+        min-height:100vh;
         background:url('../images/kontakt.jpg');
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -593,7 +599,7 @@ hr{
     }
     #map {
         width: 100%;
-        height: 400px;
+        height: 500px;
       }
       .cat .grey-box{
           padding:10px;
@@ -679,7 +685,6 @@ hr{
     }
     .cat p{
         font-size:32px;
-        line-height: 100%;
         margin:0px;
         text-align: center;
     }
