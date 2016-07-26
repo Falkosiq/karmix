@@ -12,7 +12,10 @@
                     
                 </div>
                 <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
-
+                    <div class="tag-bar row">
+                        <div class="col-md-9 col-sm-9 col-xs-9 tags"></div>
+                        <a href="{{ app.request.headers.get('referer') }}"><div class="col-md-3 col-sm-3 col-xs-3 back">Powrót</div></a>
+                    </div>
     
             <div class="offer">
                 <div class="row">
@@ -23,16 +26,16 @@
                                 <img class="img-responsive offer-photo" src="{{ asset('images/blank.jpg') }}">
                             {% endif %}
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-8 offer-info">
                             <h1><b>{{ offer.name }}</b></h1><br>
-                            <b>Zastosowanie:</b> {{ offer.application }} <br>
-                            <b>Stan na magazynie:</b> {{ offer.state }} <br>
-                            <b>Cena:</b> {{ offer.price }} zł / {{ offer.per }}
+                            <div><p><b>Zastosowanie:</b> <br>{{ offer.application }} <br>
+                                    <b>Stan na magazynie:</b><br> {{ offer.state }} <br></p>
+                                <b>Cena:</b><br> {{ offer.price }} zł / {{ offer.per }}
                     </div>  
                 </div>
-                            <br><b>Opis:</b><br>
+                    <div class="col-md-12 desc"><br><b>Opis:</b>
                             {{ offer.description }}
-                         
+                         </div>
             </div>
                 </div>
             </div>

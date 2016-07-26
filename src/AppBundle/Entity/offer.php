@@ -89,9 +89,9 @@ class offer
     private $photo3;
 
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="tag", type="bigint")
+     * @ORM\Column(name="tag", type="string")
      */
     private $tag;
 

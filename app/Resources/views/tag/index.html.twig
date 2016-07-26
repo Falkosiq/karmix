@@ -1,0 +1,39 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block body %}
+    <h1>Lista tagów</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nazwa</th>
+                <th>Kategoria</th>
+                <th>Akcje</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for tag in tags %}
+            <tr>
+                
+                <td>{{ tag.name }}</td>
+                <td>{{ tag.category }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('admin_tag_show', { 'id': tag.id }) }}">Pokaż</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('admin_tag_edit', { 'id': tag.id }) }}">Edycja</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="col-md-12">
+        <a href="{{ path('admin_tag_new') }}">Stwórz nową ofertę</a><br>
+            <a href="{{ path('admin') }}">Powrót do panelu</a>
+    </div>
+{% endblock %}

@@ -157,7 +157,7 @@ a:hover{
         display:flex;
         align-items: center;
         justify-content: center;
-        font-size:48px;
+        font-size:60px;
         width:100%;
         height:34%;
         transition:all 0.5s ease;
@@ -176,7 +176,8 @@ a:hover{
         -webkit-transition:all 0.5s ease;
         -o-transition:all 0.5s ease;
         -moz-transition:all 0.5s ease;
-        transform: scale(0.95);  
+        transform: scale(0.95); 
+        
         background:url('../images/pasze_hov.jpg');
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -209,7 +210,7 @@ a:hover{
         cursor: pointer;
     }
     .cat p{
-        font-size:48px;
+        font-size:55px;
         line-height: 40px;
         margin:0px;
         text-align: center;
@@ -217,6 +218,9 @@ a:hover{
     .cat span{
         margin:0px auto;
         text-align: center;
+    }
+    #pasze p{
+        font-size:65px;
     }
     .zboza{
         background:url('../images/zboza.jpg');
@@ -286,7 +290,7 @@ a:hover{
         -o-transition:all 0.5s ease;
         -moz-transition:all 0.5s ease;
         transform: scale(0.95);  
-        background:url('../images/zboza_hov.jpg');
+        background:url('../images/preparaty.jpg');
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -409,7 +413,6 @@ a:hover{
         -webkit-transition:all 0.5s ease;
         -o-transition:all 0.5s ease;
         -moz-transition:all 0.5s ease;
-        font-weight: bold;
         transform: scale(0.95);  
         background:url('../images/drob_hov.jpg');
         -webkit-background-size: cover;
@@ -423,7 +426,6 @@ a:hover{
         -webkit-transition:all 0.5s ease;
         -o-transition:all 0.5s ease;
         -moz-transition:all 0.5s ease;
-        font-weight: bold;
         transform: scale(0.95);  
         background:url('../images/wieprz_hov.jpg');
         -webkit-background-size: cover;
@@ -437,7 +439,6 @@ a:hover{
         -webkit-transition:all 0.5s ease;
         -o-transition:all 0.5s ease;
         -moz-transition:all 0.5s ease;
-        font-weight: bold;
         transform: scale(0.95);  
         background:url('../images/bydlo_hov.jpg');
         -webkit-background-size: cover;
@@ -451,7 +452,6 @@ a:hover{
         -webkit-transition:all 0.5s ease;
         -o-transition:all 0.5s ease;
         -moz-transition:all 0.5s ease;
-        font-weight: bold;
         transform: scale(0.95);  
         background:url('../images/konie_hov.jpg');
         -webkit-background-size: cover;
@@ -465,7 +465,6 @@ a:hover{
         -webkit-transition:all 0.5s ease;
         -o-transition:all 0.5s ease;
         -moz-transition:all 0.5s ease;
-        font-weight: bold;
         transform: scale(0.95);  
         background:url('../images/golebie_hov.jpg');
         -webkit-background-size: cover;
@@ -479,7 +478,6 @@ a:hover{
         -webkit-transition:all 0.5s ease;
         -o-transition:all 0.5s ease;
         -moz-transition:all 0.5s ease;
-        font-weight: bold;
         transform: scale(0.95);  
         background:url('../images/psy_hov.jpg');
         -webkit-background-size: cover;
@@ -493,9 +491,8 @@ a:hover{
         -webkit-transition:all 0.5s ease;
         -o-transition:all 0.5s ease;
         -moz-transition:all 0.5s ease;
-        font-weight: bold;
         transform: scale(0.95);  
-        background:url('../images/wyposazenie_hov.jpg');
+        background:url('../images/ogolne.jpg');
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -507,7 +504,10 @@ hr{
         margin-right:20%;
         border: 1px #fff solid;
     }
-    
+    .sec hr{
+        margin-top:50px;
+        margin-bottom:50px;
+    }
     .col-sm-12{
         position:float;
         float:left;
@@ -522,6 +522,10 @@ hr{
         height:160px;
         width:160px;
         margin-right:30px;
+    }
+     .offer-thumb:hover{
+         border:3px solid #fff;
+         outline:3px solid #ffe033;
     }
     .offer-photo
     {
@@ -549,7 +553,7 @@ hr{
         vertical-align: middle;
     }
     #about{
-        min-height:100vh;
+        height:100vh;
         background:url('../images/about.jpg');
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -558,7 +562,7 @@ hr{
         background-position:center;
     }
     #collaboration{
-        min-height:100vh;
+        height:100vh;
         background:url('../images/wspolpraca.jpg');
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -600,6 +604,7 @@ hr{
     #map {
         width: 100%;
         height: 500px;
+        border: 5px solid #fff;
       }
       .cat .grey-box{
           padding:10px;
@@ -608,6 +613,46 @@ hr{
       }
       .cat:hover .grey-box{
           background:rgba(94,94,94,0.8);
+      }
+      .full-list{
+          font-size:20px;
+      }
+      .full-list p{
+          font-size:32px;
+      }
+      .list-text hr{
+          width:100%;
+          margin:auto;
+          margin-top:5px;
+          border: 1px #c0c0c0 solid;
+      }
+      .offer-info p{
+          font-size:24px;
+          
+          bottom:0px;
+      }
+      .desc{
+          margin-left:2%;
+      }
+      .desc b{
+          margin-left:2%;
+      }
+      .tag-bar{
+          width:calc(100%+30px);
+          height:100px;
+          margin-left:-15px;
+          margin-right:-15px;
+          background:#c0c0c0;
+      }
+      .back{
+          height:100%;
+          background:#c0c0c0;
+          display:flex;
+          align-items: center;
+          justify-content: center;
+      }
+      .back:hover{
+          background:#5e5e5e;
       }
 @media screen and (max-width: 991px){
     .row > [class*='blank'] {
@@ -708,6 +753,18 @@ hr{
     }
     .list-text{
         font-size:20px;
+    }
+    #map{
+        display:none;
+    }
+    #about{
+       height:auto;
+    }
+    #collaboration{
+       height:auto; 
+    }
+    .sec-in{
+        display:block;
     }
 }
                 

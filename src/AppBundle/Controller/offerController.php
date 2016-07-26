@@ -117,9 +117,9 @@ class offerController extends Controller
      */
     public function editAction(Request $request, offer $offer)
     {
-        $offer->setPhoto1(new File($this->getParameter('images').'/'.$offer->getPhoto1()));
+        /*$offer->setPhoto1(new File($this->getParameter('images').'/'.$offer->getPhoto1()));
         $offer->setPhoto2(new File($this->getParameter('images').'/'.$offer->getPhoto2()));
-        $offer->setPhoto3(new File($this->getParameter('images').'/'.$offer->getPhoto3()));
+        $offer->setPhoto3(new File($this->getParameter('images').'/'.$offer->getPhoto3()));*/
         $deleteForm = $this->createDeleteForm($offer);
         $editForm = $this->createForm('AppBundle\Form\offerType', $offer);
         $editForm->handleRequest($request);
@@ -127,31 +127,35 @@ class offerController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             
             $file = $offer->getPhoto1();
-            $fileName = md5(uniqid()).'.'.$file->guessExtension();
-            $file->move(
-                $this->getParameter('images'),
-                $fileName
-            );
-            $offer->setPhoto1($fileName);
-            
+            if($file)
+            {
+                $fileName = md5(uniqid()).'.'.$file->guessExtension();
+                $file->move(
+                    $this->getParameter('images'),
+                    $fileName
+                );
+                $offer->setPhoto1($fileName);
+            }
             $file = $offer->getPhoto2();
             if($file)
             {
-            $fileName = md5(uniqid()).'.'.$file->guessExtension();
-            $file->move(
-                $this->getParameter('images'),
-                $fileName
-            );
-            $offer->setPhoto2($fileName);
+                $fileName = md5(uniqid()).'.'.$file->guessExtension();
+                $file->move(
+                    $this->getParameter('images'),
+                    $fileName
+                );
+                $offer->setPhoto2($fileName);
             }
             $file = $offer->getPhoto3();
-            $fileName = md5(uniqid()).'.'.$file->guessExtension();
-            $file->move(
-                $this->getParameter('images'),
-                $fileName
-            );
-            $offer->setPhoto3($fileName);
-            
+            if($file)
+            {
+                $fileName = md5(uniqid()).'.'.$file->guessExtension();
+                $file->move(
+                    $this->getParameter('images'),
+                    $fileName
+                );
+                $offer->setPhoto3($fileName);
+            }
             $em = $this->getDoctrine()->getManager();
             $em->persist($offer);
             $em->flush();

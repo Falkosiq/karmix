@@ -12,22 +12,30 @@
                     
                 </div>
                 <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
-
+                    <div class="tag-bar row">
+                        <div class="col-md-9 col-sm-9 col-xs-9 tags"></div>
+                        <a href="{{ path('homepage') }}"><div class="col-md-3 col-sm-3 col-xs-3 back">Powrót</div></a>
+                    </div>
     
         {% for offer in offers %}
             <div class="offer row">
                 <div class="col-md-2 col-sm-2 list-photo">
+                    <a href="{{ path('offer_display',{'id' : offer.id}) }}">
                     {% if offer.photo1 %}
                                 <img class="img-responsive offer-thumb" src="{{ asset('images/' ~ offer.photo1) }}">
                             {% else %}
                                 <img class="img-responsive offer-thumb" src="{{ asset('images/blank.jpg') }}">
                             {% endif %}
+                    </a>
                 </div>
                 <div class="col-md-10 col-sm-10 list-text">
                 <b><a class="show-offer" href="{{ path('offer_display',{'id' : offer.id}) }}">{{ offer.name }}</a></b>
-                <div class="full-list">Zastosowanie: {{ offer.application }} <br>
-                    Stan na magazynie: {{ offer.state }}</div>
-                Cena: {{ offer.price }} zł / {{ offer.per }}
+                <div class="full-list">
+                    <b>Zastosowanie:</b> {{ offer.application }} <br>
+                    <b>Stan na magazynie:</b> {{ offer.state }}<br>
+                    <p><b>Cena:</b> {{ offer.price }} zł / {{ offer.per }}</p>
+                </div>
+                <hr>
                 </div>
             </div>
         {% endfor %}

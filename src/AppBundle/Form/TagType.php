@@ -7,11 +7,8 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
-use Symfony\Component\Form\Extension\Core\Type\FileType;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 
-class offerType extends AbstractType
+class TagType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -21,27 +18,6 @@ class offerType extends AbstractType
     {
         $builder
             ->add('name', TextType::class, array('label' => 'Nazwa'))
-            ->add('price', TextType::class, array('label' => 'Cena'))
-            ->add('per', TextType::class, array('label' => 'Jednostka'))
-            ->add('application', TextType::class, array('label' => 'Zastosowanie'))
-            ->add('state', ChoiceType::class, array(
-                'label' => 'Stan na magazynie',
-                'choices' => array(
-                    'dostepny' => 'Dostępny',
-                    'niedostepny' => 'Niedostępny',
-                    'kontakt' => 'Prosimy o kontakt',
-                )
-            ))
-            ->add('description', TextareaType::class, array('label' => 'Opis'))
-            ->add('photo1', FileType::class, array('label' => 'Zdjęcie 1', 'required' => false))
-            ->add('photo2', FileType::class, array('label' => 'Zdjęcie 2', 'required' => false))
-            ->add('photo3', FileType::class, array('label' => 'Zdjęcie 3', 'required' => false))
-            ->add('tag', EntityType::class, array(
-                'class'=>'AppBundle:Tag',
-                'choice_label'=> function($tag) {
-                    return $tag->getName();
-                },    
-            ))
             ->add('category', ChoiceType::class, array(
                 'label' => 'Kategoria',
                 'choices' => array(
@@ -56,8 +32,7 @@ class offerType extends AbstractType
                     'golebie' => 'Pasze dla gołębi',
                     'psy' => 'Pasze dla psów i kotów',
                     'ogólne' => 'Pasze do ogólnego stosowania',
-                ),
-            ))
+                )))
         ;
     }
     
@@ -67,7 +42,7 @@ class offerType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'AppBundle\Entity\offer'
+            'data_class' => 'AppBundle\Entity\Tag'
         ));
     }
 }
