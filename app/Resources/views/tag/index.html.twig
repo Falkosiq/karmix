@@ -2,7 +2,10 @@
 
 {% block body %}
     <h1>Lista tagów</h1>
-
+     <div class="col-md-12">
+        <a href="{{ path('admin_tag_new') }}">Stwórz nowego taga</a><br>
+            <a href="{{ path('admin') }}">Powrót do panelu</a>
+    </div>
     <table class="table">
         <thead>
             <tr>
@@ -32,8 +35,5 @@
         </tbody>
     </table>
 
-    <div class="col-md-12">
-        <a href="{{ path('admin_tag_new') }}">Stwórz nowego taga</a><br>
-            <a href="{{ path('admin') }}">Powrót do panelu</a>
-    </div>
+   
 {% endblock %}

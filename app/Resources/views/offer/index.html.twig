@@ -3,6 +3,13 @@
 {% block body %}
     <div class="col-md-12">
     <h1>Lista ofert</h1>
+    
+    </div>
+    
+    </div>
+    <div class="col-md-12">
+        <a href="{{ path('admin_offer_new') }}">Stwórz nową ofertę</a><br>
+            <a href="{{ path('admin') }}">Powrót do panelu</a>
     </div>
     <div class="col-md-12">
     <table class="table">
@@ -39,9 +46,4 @@
         {% endfor %}
         </tbody>
     </table>
-    </div>
-    <div class="col-md-12">
-        <a href="{{ path('admin_offer_new') }}">Stwórz nową ofertę</a><br>
-            <a href="{{ path('admin') }}">Powrót do panelu</a>
-    </div>
 {% endblock %}

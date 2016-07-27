@@ -2,7 +2,14 @@
 
 {% block body %}
     <h1>Lista promocji</h1>
-
+ <ul>
+        <li>
+            <a href="{{ path('admin_bargain_new') }}">Stwórz nową promocję</a>
+        </li>
+        <li>
+             <a href="{{ path('admin') }}">Powrót do panelu</a>
+        </li>
+    </ul>
     <table class="table">
         <thead>
             <tr>
@@ -29,12 +36,5 @@
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('admin_bargain_new') }}">Stwórz nową promocję</a>
-        </li>
-        <li>
-             <a href="{{ path('admin') }}">Powrót do panelu</a>
-        </li>
-    </ul>
+   
 {% endblock %}
