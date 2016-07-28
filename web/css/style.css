@@ -654,6 +654,10 @@ hr{
       .back:hover{
           background:#5e5e5e;
       }
+      .slides {
+          display:flex;
+          align-items: center;
+      }
 @media screen and (max-width: 991px){
     .row > [class*='blank'] {
       display: none;
