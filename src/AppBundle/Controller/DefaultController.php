@@ -18,10 +18,12 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $bargains = $em->getRepository('AppBundle:Bargain')->findAll();
+        $sections = $em->getRepository('AppBundle:Section')->findAll();
         
         return $this->render('default/index.html.twig', array(
             'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
             'bargains' => $bargains,
+            'sections' => $sections,
         ));
     }
     /**

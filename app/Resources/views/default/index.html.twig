@@ -57,12 +57,9 @@
                 </div>
                 <div id="about" class="col-lg-10 col-md-10 col-sm-12 col-xs-12 sec">
                     <hr>
-                    <h1>o firmie</h1>
+                    <h1>{{ sections|first.name }}</h1>
                     <div class="sec-in">
-                        <p>Witamy na naszej stronie internetowej.<br><br>
-                            Firma Karmix już od wielu lat istnieje na rynku. Działamy głównie na terenie województwa Śląskiego i Wielkopolskiego. Mamy dla Państwa przygotowaną szeroką ofertę pasz i koncentratów. Zajmujemy się także skupem zboża i suszeniem nasion.<br>
-                            W naszej ofercie znalazły się również sprzęty i maszyny rolnicze. Szczegółową ofertę znajdą Państwo na stronie.<br><br>
-                            Zapraszamy!
+                        <p>{{ sections|first.text }}
                         </p>
                     </div>
                     <a href="#pasze"><img src="{{ asset('images/up_button.png') }}"></a>
@@ -77,10 +74,9 @@
                 </div>
                 <div id="collaboration" class="col-lg-10 col-md-10 col-sm-12 col-xs-12 sec">
                     <hr>
-                    <h1>współpraca</h1>
+                    <h1>{{ sections|last.name }}</h1>
                     <div class="sec-in">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum convallis turpis sit amet dapibus. Quisque eleifend, magna id aliquam fringilla, turpis sapien pharetra turpis, in elementum dui sem ut mauris. Duis neque lacus, consectetur eu faucibus ut, iaculis eu sapien. Nullam sodales quis ipsum eget mollis. Integer in dolor imperdiet, ornare augue et, congue est. Cras eget massa eu ante efficitur vestibulum. Nunc eget risus aliquet erat malesuada scelerisque quis non neque. Ut eleifend feugiat est, vitae accumsan tortor. Sed egestas nisl a libero maximus aliquet nec ac risus. Maecenas maximus purus risus, ultrices feugiat mi fermentum id. Etiam id orci et erat aliquam varius.
-                            </p>
+                        <p>{{ sections|last.text }}</p>
                     </div>
                     <a href="#pasze"><img src="{{ asset('images/up_button.png') }}"></a>
                     <hr>
