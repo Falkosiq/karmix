@@ -59,7 +59,7 @@
                     <hr>
                     <h1>{{ sections|first.name }}</h1>
                     <div class="sec-in">
-                        <p>{{ sections|first.text }}
+                        <p>{{ sections|first.text|nl2br }}
                         </p>
                     </div>
                     <a href="#pasze"><img src="{{ asset('images/up_button.png') }}"></a>
@@ -76,7 +76,7 @@
                     <hr>
                     <h1>{{ sections|last.name }}</h1>
                     <div class="sec-in">
-                        <p>{{ sections|last.text }}</p>
+                        <p>{{ sections|last.text|nl2br }}</p>
                     </div>
                     <a href="#pasze"><img src="{{ asset('images/up_button.png') }}"></a>
                     <hr>
